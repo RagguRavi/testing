@@ -1,0 +1,31 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+				<!-- Bussiness Object  -->
+		
+		<bean class="spring.AOP.aspectjXml.Bank" id="bank"/>
+		<bean class="spring.AOP.aspectjXml.BankAdvices" id="bankAdvice"></bean>
+		
+		<aop:config>
+		
+		<aop:pointcut expression="execution(public * *(..))" id="pub"/>
+		
+		<aop:aspect ref="bankAdvice">
+		<aop:before method="beforeAdvice" pointcut-ref="pub"/>
+		<aop:after method="afterAdvice" pointcut-ref="pub"/>
+		<aop:after-returning method="afterReturning" pointcut-ref="pub"/>
+		<aop:after-throwing method="afterThrowing" pointcut-ref="pub"/>
+		</aop:aspect>
+		
+		
+		</aop:config>	
+		  
+			
+
+</beans>

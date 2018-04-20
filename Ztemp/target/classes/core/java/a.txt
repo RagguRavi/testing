@@ -1,0 +1,8 @@
+a
+b
+this is for email
+ [appointmentDate]
+ [locationAddress]
+ [providerName]
+ [locationName]
+ [appointmentType]

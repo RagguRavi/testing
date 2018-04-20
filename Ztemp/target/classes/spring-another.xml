@@ -1,0 +1,21 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		">
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations" value="database.properties" />
+	</bean>
+	<bean class="spring.core.another.Address" c:city="Kurukshetra"
+		c:state="Haryana" c:street="Thol" id="address">
+	</bean>
+
+	<bean class="spring.core.another.Customer" id="customer" c:cid="1" c:customerName="nitin" c:address-ref="address"/>
+	
+	<bean class="spring.core.another.MyEventListener" id="listner"></bean>
+	<bean class="spring.core.another.EventPublisher" id="apublisher"></bean>
+	<bean class="spring.core.another.ResourceLoaderExample"></bean>
+</beans>
