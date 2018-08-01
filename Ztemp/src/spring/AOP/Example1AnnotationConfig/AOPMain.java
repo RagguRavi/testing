@@ -1,7 +1,7 @@
 package spring.AOP.Example1AnnotationConfig;
 
-import org.apache.xbean.spring.context.ClassPathXmlApplicationContext;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class AOPMain {
 public static void main(String[] args) {
