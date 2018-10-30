@@ -34,11 +34,11 @@
 		</dependency>
 		<!-- MySql Connector -->
 		<!-- MySQL -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>${mysql.connector.version}</version>
-		</dependency>
+		</dependency> -->
 		<!-- Spring Security -->
 		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-core -->
 		<dependency>
@@ -131,7 +131,25 @@
 		    <artifactId>javax.jms-api</artifactId>
 		    <version>${jms.version}</version>
 		</dependency>
-	
+		<dependency>
+		   <groupId>com.twilio.sdk</groupId>
+		   <artifactId>twilio</artifactId>
+		   <version>7.23.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-web</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		
+		<!-- Postgres driver class -->
+		<dependency>
+		    <groupId>postgresql</groupId>
+		    <artifactId>postgresql</artifactId>
+		    <version>9.1-901-1.jdbc4</version>
+		</dependency>
+		
 	</dependencies>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
