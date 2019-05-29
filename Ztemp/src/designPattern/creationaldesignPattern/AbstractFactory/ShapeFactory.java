@@ -4,7 +4,7 @@ public class ShapeFactory extends AbstractFactory{
  
 	public Shape getShapeFactory(String shapeType) {
 		if(shapeType.equalsIgnoreCase("CIRCLE"))
-		return new Circle();
+			return new Circle();
 		else if(shapeType.equalsIgnoreCase("RECTANGLE"))
 			return new Rectangle();
 		else if(shapeType.equalsIgnoreCase("SQUARE"))
