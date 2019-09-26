@@ -51,5 +51,9 @@ public static void main(String[] args) {
 	list.remove(1);
 	System.out.println(list);
 	
+	Double d = 1234.56788;
+	
+	System.out.println(Math.ceil(d*100)/100);
+	System.out.println(Math.round(d));
 }
 }
