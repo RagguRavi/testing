@@ -15,7 +15,7 @@
 		<hibernate.version>5.3.3.Final</hibernate.version>
 		<spring.jpa>2.0.0.RELEASE</spring.jpa>
 		<joda.time.version>2.9.2</joda.time.version>
-		<jackson.version>2.7.3</jackson.version>
+		<jackson.version>2.9.10.8</jackson.version>
 		<jms.version>2.0</jms.version>
 		<stripe.api>9.6.0</stripe.api>
 	</properties>
