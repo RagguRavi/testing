@@ -18,12 +18,18 @@
 		<jackson.version>2.7.3</jackson.version>
 		<jms.version>2.0</jms.version>
 		<stripe.api>9.6.0</stripe.api>
+		<mysql.connector.version>8.0.26</mysql.connector.version>
 	</properties>
 
 	<dependencies>
 		<!-- <dependency> <groupId>org.codehaus.jackson</groupId> <artifactId>jackson-mapper-asl</artifactId> 
 			<version>1.9.13</version> </dependency> -->
 	<!-- Jackson for Marshaling and un-marshaling -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.connector.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
@@ -175,6 +181,14 @@
 		    <groupId>postgresql</groupId>
 		    <artifactId>postgresql</artifactId>
 		    <version>9.1-901-1.jdbc4</version>
+		</dependency>
+		
+		
+		<!-- MSSql driver class -->
+		<dependency>
+		    <groupId>com.microsoft.sqlserver</groupId>
+		    <artifactId>mssql-jdbc</artifactId>
+		    <version>9.4.0.jre8</version>
 		</dependency>
 		
 		<!-- Stripe API -->
