@@ -8,6 +8,7 @@ import org.apache.commons.logging.LogFactory;
 public class LogAroundService implements MethodInterceptor{
 
 	
+	@Override
 	public Object invoke(MethodInvocation mi) throws Throwable {
 		System.out.println("-----LogAroundServcie------------");
 		Log l=LogFactory.getLog(this.getClass());

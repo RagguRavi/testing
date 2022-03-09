@@ -1,9 +1,6 @@
 package twilioTest;
 
-import java.util.Arrays;
-
 import com.twilio.Twilio;
-import com.twilio.base.ResourceSet;
 import com.twilio.rest.taskrouter.v1.workspace.Task;
 
 public class TwilioTaskRouter1 {

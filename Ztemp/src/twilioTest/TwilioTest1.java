@@ -4,15 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.twilio.Twilio;
-import com.twilio.base.ResourceSet;
-import com.twilio.http.TwilioRestClient;
-import com.twilio.http.TwilioRestClient.Builder;
-import com.twilio.rest.api.v2010.account.Key;
-import com.twilio.rest.chat.v2.Credential;
 import com.twilio.rest.chat.v2.Service;
 import com.twilio.rest.chat.v2.service.Channel;
-import com.twilio.rest.chat.v2.service.User;
-import com.twilio.rest.chat.v2.service.channel.Message;
 
 public class TwilioTest1 {
 

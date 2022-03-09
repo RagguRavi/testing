@@ -2,7 +2,6 @@ package core.java;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -46,6 +45,7 @@ class SuperClass implements Predicate<Integer>
 	}
 
 
+	@Override
 	public String toString() {
 		return "SuperClass [name=" + name + "]";
 	}
@@ -58,6 +58,7 @@ class SuperClass implements Predicate<Integer>
 	}
 
 
+	@Override
 	public boolean test(Integer arg0) {
 		// TODO Auto-generated method stub
 		return true;

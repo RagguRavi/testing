@@ -1,19 +1,10 @@
 package twilioTest;
 
-import java.util.Arrays;
-import java.util.Iterator;
 import java.util.Map;
 
 import com.twilio.Twilio;
-import com.twilio.base.ResourceSet;
-import com.twilio.rest.chat.v2.service.User;
-import com.twilio.rest.chat.v2.service.channel.Member;
-import com.twilio.rest.taskrouter.v1.workspace.Activity;
 import com.twilio.rest.taskrouter.v1.workspace.Task;
 import com.twilio.rest.taskrouter.v1.workspace.Worker;
-import com.twilio.rest.taskrouter.v1.workspace.task.Reservation;
-
-import antlr.collections.List;
 
 public class TwilioChat7 {
  public static void main(String[] args) {

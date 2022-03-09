@@ -1,6 +1,5 @@
 package core.jms;
 
-import javax.jms.Connection;
 import javax.jms.Message;
 import javax.jms.MessageListener;
 import javax.jms.Session;
@@ -11,7 +10,6 @@ import javax.jms.TopicConnectionFactory;
 import javax.jms.TopicPublisher;
 import javax.jms.TopicSession;
 import javax.naming.InitialContext;
-import javax.naming.NamingException;
 
 public class JMSMain {
 

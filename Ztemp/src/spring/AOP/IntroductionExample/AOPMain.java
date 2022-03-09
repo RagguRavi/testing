@@ -7,7 +7,7 @@ public class AOPMain {
 	public static void main(String[] args) {
 		System.out.println("-----------------container intialized---------");
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("springIntroductionsExample.xml");
-		Bank bank = (Bank)applicationContext.getBean(Bank.class);
+		Bank bank = applicationContext.getBean(Bank.class);
 		bank.sayHello();
 	}
 }

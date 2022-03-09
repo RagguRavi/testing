@@ -5,15 +5,10 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.ZoneId;
-import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
-import java.time.format.TextStyle;
 import java.util.Date;
-import java.util.Locale;
 import java.util.TimeZone;
-
-import org.joda.time.format.DateTimeFormat;
 
 public class Test8 {
 	public static void main(String[] args) {

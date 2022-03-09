@@ -7,7 +7,6 @@ import java.io.StringWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
-import java.nio.charset.Charset;
 import java.util.Arrays;
 
 import javax.xml.bind.JAXBContext;

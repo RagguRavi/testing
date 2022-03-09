@@ -7,7 +7,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
-import java.util.function.Predicate;
 
 public class Temp4 {
 
@@ -37,6 +36,7 @@ public class Temp4 {
 			return "MyDate [day=" + day + ", month=" + month + "]";
 		}
 		
+		@Override
 		public int compareTo(MyDate d) {
 			 SimpleDateFormat sdf = new SimpleDateFormat("MM-dd");
 		        try {

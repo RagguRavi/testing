@@ -1,12 +1,5 @@
 package twilioTest;
 
-import com.twilio.Twilio;
-import com.twilio.base.ResourceSet;
-import com.twilio.rest.chat.v2.service.User;
-import com.twilio.rest.taskrouter.v1.workspace.Task;
-import com.twilio.rest.taskrouter.v1.workspace.Worker;
-import com.twilio.rest.taskrouter.v1.workspace.worker.Reservation;
-
 public class TwilioChat8 {
 	public static void main(String[] args) {
 		

@@ -2,6 +2,7 @@ package designPattern.creationaldesignPattern.AbstractFactory;
 
 public class ShapeFactory extends AbstractFactory{
  
+	@Override
 	public Shape getShapeFactory(String shapeType) {
 		if(shapeType.equalsIgnoreCase("CIRCLE"))
 			return new Circle();
@@ -14,6 +15,7 @@ public class ShapeFactory extends AbstractFactory{
 	}
 
 
+	@Override
 	Color getColorFactory(String colorName) {
 		// TODO Auto-generated method stub
 		return null;

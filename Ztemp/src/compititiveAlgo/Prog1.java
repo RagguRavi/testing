@@ -1,7 +1,5 @@
 package compititiveAlgo;
 
-import java.util.Arrays;
-
 public class Prog1 {
 	public static void main(String[] args) {
 		int arr[] = {5,3,2,4,1};

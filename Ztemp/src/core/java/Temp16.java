@@ -1,10 +1,6 @@
 package core.java;
 
-import java.util.Arrays;
 import java.util.Date;
-import java.util.List;
-
-import org.joda.time.DateTimeUtils;
 
 public class Temp16 {
 	public static void main(String[] args) {

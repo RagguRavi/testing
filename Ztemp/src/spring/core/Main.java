@@ -1,10 +1,7 @@
 package spring.core;
 
-import java.util.Arrays;
-
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.core.env.Environment;
 import org.springframework.web.client.RestTemplate;
 
 public class Main {

@@ -1,9 +1,7 @@
 package twilioTest;
 
 import com.twilio.Twilio;
-import com.twilio.base.ResourceSet;
 import com.twilio.rest.chat.v2.Service;
-import com.twilio.rest.chat.v2.service.Role;
 
 public class TwilioTest6 {
 

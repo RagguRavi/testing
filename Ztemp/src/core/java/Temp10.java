@@ -1,6 +1,5 @@
 package core.java;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.regex.Matcher;

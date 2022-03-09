@@ -1,11 +1,9 @@
 package twilioTest;
 
 import java.net.URL;
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.util.Base64;
@@ -29,7 +27,7 @@ public static void main(String[] args) {
         connection.setRequestMethod("GET");
         connection.setDoOutput(true);
         connection.setRequestProperty  ("Authorization", "Basic " + encoding);
-        InputStream content = (InputStream)connection.getInputStream();
+        InputStream content = connection.getInputStream();
         
         ObjectMapper objectMapper = new ObjectMapper();
 		Map<String,Object> objcectMapper = objectMapper.readValue(content,new TypeReference<Map<String, Object>>() {} );
@@ -50,7 +48,7 @@ public static void main(String[] args) {
         connection.setRequestMethod("GET");
         connection.setDoOutput(true);
         connection.setRequestProperty  ("Authorization", "Basic " + encoding);
-        content = (InputStream)connection.getInputStream();
+        content = connection.getInputStream();
         
         System.out.println(content.available());
         File file = new File("d:/"+"abc.jpg");

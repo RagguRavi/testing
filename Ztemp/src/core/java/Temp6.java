@@ -1,7 +1,5 @@
 package core.java;
 
-import java.util.Scanner;
-
 public class Temp6 {
 
     static int divisibleSumPairs(int totalNumber, int dividedBy, int[] ar) {

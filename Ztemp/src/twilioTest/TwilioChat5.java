@@ -1,20 +1,7 @@
 package twilioTest;
 
 import com.twilio.Twilio;
-import com.twilio.base.ResourceSet;
-import com.twilio.rest.chat.v2.service.User;
-import com.twilio.rest.chat.v2.service.channel.Member;
-import com.twilio.rest.taskrouter.v1.Workspace;
-import com.twilio.rest.taskrouter.v1.workspace.Activity;
-import com.twilio.rest.taskrouter.v1.workspace.Event;
-import com.twilio.rest.taskrouter.v1.workspace.Task;
-import com.twilio.rest.taskrouter.v1.workspace.TaskChannel;
-import com.twilio.rest.taskrouter.v1.workspace.TaskQueue;
-import com.twilio.rest.taskrouter.v1.workspace.Worker;
-import com.twilio.rest.taskrouter.v1.workspace.WorkerReader;
 import com.twilio.rest.taskrouter.v1.workspace.WorkspaceStatistics;
-import com.twilio.rest.taskrouter.v1.workspace.task.Reservation;
-import com.twilio.rest.taskrouter.v1.workspace.worker.WorkerChannel;
 
 public class TwilioChat5 {
 	public static void main(String[] args) {
