@@ -32,5 +32,8 @@ public class StreamTest {
 		System.out.println(opt.get());
 		//square.forEach(System.out::println);
 	}
+	
+	private static int a=1;
+	private static void abc() {}
 
 }
