@@ -1,9 +1,12 @@
 package core.algo.ArrayProblem;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class TwoElementSum {
@@ -11,7 +14,7 @@ public class TwoElementSum {
 		List<Integer> list = Arrays.asList(2,11,15,7);
 		int target = 9;
 		
-		System.out.println(getSumInx(list, target));
+		System.out.println(secondWay(list, target));
 	}
 	
 	
@@ -30,12 +33,15 @@ public class TwoElementSum {
 	
 	
 	public static List<Integer> secondWay(List<Integer> list,int sum) {
-		Set<Integer> set = new LinkedHashSet<>();
+		Map<Integer,Integer> map = new HashMap();
 		
 		for(int i=0;i<list.size();i++) {
 			int complement = sum - list.get(i);
+			if(map.containsKey(complement)) {
+				return Arrays.asList(map.get(complement),i);
+			}
 			
-//			if(set.con)
+			map.put(list.get(i), i);
 		}
 		return null;
 	}
