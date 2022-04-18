@@ -1,10 +1,14 @@
 package core.java1;
 
+import java.time.LocalDate;
+
 public class Test15 implements Int1 {
 
 	public static void main(String[] args) {
 		Test15 t = new Test15();
 		t.isNull("");
+		
+		System.out.println(LocalDate.now().plusDays(8));
 		
 	}
 

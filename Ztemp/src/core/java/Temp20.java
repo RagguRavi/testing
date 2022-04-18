@@ -14,6 +14,9 @@ public class Temp20 {
 		int a = 10;
 		new A2(a == 10 ? "aaaa" : "value of a is 10" );
 //		A.show(a == 10 ? "" : "value of a is 10");
+		
+		char temp='9';
+		System.out.println((temp >= 48 && temp <= 57));
 	}
 
 }
