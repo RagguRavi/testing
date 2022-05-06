@@ -2,9 +2,11 @@ package core.algo.simple;
 
 public class NoOfTrailingZeros {
 	public  static void main(String [] args) {
-		int no = 49837;
-		System.out.println(noOfTralingZeroInFactorial(no));
-		System.out.println(noOfTralingZeroInFactorial2(no));
+//		int no = 25;
+		//System.out.println(noOfTralingZeroInFactorial(no));
+		//System.out.println(noOfTralingZeroInFactorial2(no));
+		
+		System.out.println(1%3);
 		
 	}
 	
