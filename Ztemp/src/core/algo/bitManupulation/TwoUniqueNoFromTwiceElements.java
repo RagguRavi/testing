@@ -42,8 +42,11 @@ public class TwoUniqueNoFromTwiceElements {
  
     public static void main(String[] args)
     {
-        int[] arr = new int[] {24,19, 11, 15, 17,  11, 15,  17 };
+        int[] arr = new int[] {2,3,4,5,4,5,3,9};
         int n = arr.length;
-        UniqueNumbers2(arr, n);
+//        UniqueNumbers2(arr, n);
+        int xor = 2^9;
+        System.out.println(xor & ~(xor-1));
+        System.out.println(xor & (-xor));
     }
 }
