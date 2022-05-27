@@ -1,34 +1,40 @@
 package core.algo.simple;
-import java.io.*;
 
-import java.util.*;
+import java.util.Scanner;
 
-public class TestClass {
+class TestClass {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String args[]) throws Exception {
 
 		Scanner s = new Scanner(System.in);
-		int rem = 0, no;
-		int N = s.nextInt();
-		for (int i = 0; i < N; i++) {
-			no = s.nextInt();
-			if (i < N / 2) {
-				while (true) {
-					if (no / 10 == 0)
-						break;
-					else
-						no = no / 10;
-				}
 
-			} else {
-				no = no % 10;
+		long testCases = s.nextInt();
+		int size=0;
+		long reuiredAverage,sum = 0;
+
+		while (testCases > 0) {
+			sum = 0;
+			
+			size = s.nextInt();
+			int a[] = new int[size];
+			reuiredAverage = s.nextInt();
+
+			for (int i = 0; i < size; i++) {
+				a[i] = s.nextInt();
+				sum += a[i];
 			}
-			rem = (rem * 10 + no) % 11;
+
+			if (sum / size <= reuiredAverage) {
+				System.out.println("0");
+			} else {
+				long res = (sum / (reuiredAverage + 1)) + 1;
+				System.out.println(res - size);
+			}
+
+			testCases--;
+
 		}
-		if (rem == 0)
-			System.out.println("OUI");
-		else
-			System.out.println("NON");
+
 	}
 
 }

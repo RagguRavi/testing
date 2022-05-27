@@ -5,16 +5,105 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+
+import org.joda.time.Hours;
+
 import java.util.Scanner;
 
 public class HackerEarchSolutions {
 
 	public static void main(String[] args) {
-		moduloStrength();
+		splitHouse();
 		
 //		System.out.println((int)(Math.pow(10,9) + 7));
 	}
 	
+	public static void splitHouse() {
+		Scanner sc = new Scanner(System.in);
+		int size = sc.nextInt();
+		String houses = sc.next();
+		
+		houses = houses.replace(".", "B");
+		
+		if(houses.contains("B")) {
+			
+			int count = 0;
+			char chars[] = houses.toCharArray();
+			for(char ch: chars) {
+				if(ch == 'H') {
+					count++;
+				} else {
+					count =0;
+				}
+				
+				if(count >1 ) {
+					System.out.println("NO");
+					break;
+				}
+			}
+			
+			if(count == 0 || count == 1) {
+				System.out.println("YES");
+				System.out.println(houses);
+			}
+		} else {
+			if(houses.contains("H") && houses.length() == 1) {
+				System.out.println("YES");
+				System.out.println(houses);
+			} else {
+				System.out.println("NO");
+			}
+		}
+	}
+	
+	public static void noOfSteps() {
+		Scanner sc = new Scanner(System.in);
+		int size = sc.nextInt();
+		
+		int minNumber = Integer.MAX_VALUE;
+		int arr1[] = new int[size];
+		int minimumIndex = -1;
+		for(int i=0;i<size;i++) {
+			int no = sc.nextInt();
+			arr1[i] = no;
+			if(no < minNumber) {
+				minNumber = no;
+				minimumIndex = i;
+			}
+			
+		}
+		
+		int arr2[] = new int[size];
+		for(int i=0;i<size;i++) {
+			arr2[i] = sc.nextInt();
+		}
+		
+		int count = 0;
+		for(int i=0;i<size;i++) {
+			int tempNo = arr1[i];
+			if(tempNo>minNumber) {
+				while(tempNo > minNumber) {
+					count++;
+					tempNo = tempNo - arr2[i];
+				}
+				
+				if(tempNo != minNumber) {
+					
+					if(tempNo == (arr1[minimumIndex] - arr2[minimumIndex])) {
+						minNumber = arr1[minimumIndex] - arr2[minimumIndex];
+					} else {
+						System.out.println(-1);
+						return;
+					}
+				} 
+				
+				arr1[i] = tempNo;
+			}
+		}
+		
+		System.out.println(count);
+		
+	}
 	public static void moduloStrength() {
 		Scanner sc = new Scanner(System.in);
 		int noOfStudents = sc.nextInt();

@@ -1,10 +1,9 @@
 package core.algo.simple;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class HackerEarthBitManupulation {
 
@@ -12,7 +11,7 @@ public class HackerEarthBitManupulation {
 	 
 	 public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		specialBits();
+		 XorOfNumbers();
 //		System.out.println(Arrays.toString(BitsSetTable256));
 	}
 	 
@@ -42,34 +41,60 @@ public class HackerEarthBitManupulation {
 	}
 
 	public static void XorOfNumbers() {
-		Scanner sc = new Scanner(System.in);
-		int size = sc.nextInt();
-		int testCases = sc.nextInt();
-		
-		int tempResult = 0 ;
-		int arr[] = new int[size];
-		for(int i=0;i<size;i++) {
-			int no = sc.nextInt();
-			arr[i]=no;
-			tempResult = tempResult ^ no;
-		}
-		
-		
-		for(int i=0;i<testCases;i++) {
-			int result = tempResult;
-			int from = sc.nextInt()-1;
-			int to = sc.nextInt()-1;
+		try {
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			String str = br.lines().collect(Collectors.joining(System.lineSeparator()));
+			System.out.println(str);
+			String temp[] = br.readLine().split(" ");
+
+			int size = Integer.parseInt(temp[0]);
+			int testCases = Integer.parseInt(temp[1]);
+
+			int tempResult = 0 ;
+			int arr[] = new int[size];
 			
-			for(int j=from;j<=to;j++) {
-				result = result ^ arr[j];
+			temp = br.readLine().split(" ");
+			
+			for(int i=0;i<size;i++) {
+				int no = Integer.valueOf(temp[i]);
+				arr[i]=no;
+				tempResult = tempResult ^ no;
+			}
+
+
+			for(int i=0;i<testCases;i++) {
+				temp = br.readLine().split(" ");
+				int result = tempResult;
+				int from = Integer.valueOf(temp[0])-1;
+				int to = Integer.valueOf(temp[1])-1;
+
+				for(int j=from;j<=to;j++) {
+					result = result ^ arr[j];
+				}
+
+
+				System.out.println(result);
+
 			}
 			
-						
-			System.out.println(result);
-			
+		} catch(Exception e) {
+			e.printStackTrace();
 		}
-		sc.close();
 	}
+	
+	// Method to calculate xor
+    static int computeXOR(int n) {
+        if (n % 4 == 0)
+            return n;
+        // If n%4 gives remainder 1
+        if (n % 4 == 1)
+            return 1;
+        // If n%4 gives remainder 2
+        if (n % 4 == 2)
+            return n + 1;
+        // If n%4 gives remainder 3
+        return 0;
+    }
 	
 public static void xorSplit(Long no) {
 		

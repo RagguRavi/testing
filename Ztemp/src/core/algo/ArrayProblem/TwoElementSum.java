@@ -11,17 +11,17 @@ import java.util.Set;
 
 public class TwoElementSum {
 	public static void main(String [] args) {
-		List<Integer> list = Arrays.asList(2,11,15,7);
-		int target = 9;
+		List<Integer> list = Arrays.asList(10,15,-5,15,-10,5);
+		int target = 20;
 		
-		System.out.println(secondWay(list, target));
+		System.out.println(getSumInx(list, target));
 	}
 	
 	
 	public static List<Integer> getSumInx(List<Integer> list,int sum) {
 		List<Integer> idx = new LinkedList<Integer>();
 		for(int i=0;i<list.size();i++) {
-			for(int j = i;j<list.size();j++) {
+			for(int j = i+1;j<list.size();j++) {
 				int sumTemp = list.get(i) + list.get(j);
 				if(sumTemp == sum) {
 					return Arrays.asList(i,j);
@@ -33,7 +33,7 @@ public class TwoElementSum {
 	
 	
 	public static List<Integer> secondWay(List<Integer> list,int sum) {
-		Map<Integer,Integer> map = new HashMap();
+		Map<Integer,Integer> map = new HashMap<>();
 		
 		for(int i=0;i<list.size();i++) {
 			int complement = sum - list.get(i);
