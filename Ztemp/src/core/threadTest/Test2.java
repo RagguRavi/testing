@@ -1,73 +1,85 @@
 package core.threadTest;
 
 public class Test2 {
-	static int limit = 50;
-	int count = 1;
-	public static void main(String args[]) {
+	
+	public static void main(String[] args) {
 		Test2 t = new Test2();
+		NewThread t1 = new NewThread("one",t);
+		NewThread t2 = new NewThread("Two",t);
+		NewThread t3 = new NewThread("Three",t);
 		
-		Runnable t1 = () -> {
-			t.printOdd();
-		};
+		t1.t.start();
+		t2.t.start();
+		t3.t.start();
 		
-		Runnable t2 = () -> {
-			t.printEven();
-		};
+		System.out.println(t1.name+" is alive "+t1.t.isAlive());
+		System.out.println(t2.name+"  is alive "+t2.t.isAlive());
+		System.out.println(t3.name+"  is alive "+t3.t.isAlive());
 		
-		new Thread(t1,"Thread one").start();
-		new Thread(t2,"Thread Two").start();
-		
-		System.out.println("Thread Ends");
-	}
-	
-	synchronized void printOdd() {
 		try {
-			while(count< limit) {
-
-				if(count % 2 == 0) {
-					wait();
-				}
-
-				System.out.println(Thread.currentThread().getName() +"  "+ count);
-				notify();
-				count++;
+//			t1.t.join();
+//			t2.t.join();
+//			t3.t.join();
+			
+			for(int i=0;i<10;i++) {
+				System.out.println(t1.name+" is alive "+t1.t.getState());
+				System.out.println(t2.name+"  is alive "+t2.t.getState());
+				System.out.println(t3.name+"  is alive "+t3.t.getState());
+				Thread.sleep(2000);
 			}
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	synchronized void printEven()  {
-		try {
-			while(count< limit) {
-
-				if(count % 2 > 0) {
-					wait();
-				}
-
-				System.out.println(Thread.currentThread().getName() +"  "+ count);
-				notify();
-				count++;
-			}
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	 public void test() {
-		try {
-			synchronized (this) {
-				for(int i = 0; i<10;i++) {
-
-					System.out.println(Thread.currentThread().getName() );
-					Thread.sleep(500);
-					System.out.println("Hey I am here");
-				}
-
-			}
+			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+		
+		System.out.println(t1.name+" is alive "+t1.t.isAlive());
+		System.out.println(t2.name+"  is alive "+t2.t.isAlive());
+		System.out.println(t3.name+"  is alive "+t3.t.isAlive());
+		
+		
+		System.out.println("Main thread exiting");
 	}
+	
+	synchronized void print(NewThread th) {
+		System.out.println(th.name +": ");
+		
+		try {
+			Thread.sleep(1000);
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+}
+
+
+class NewThread implements Runnable {
+	
+	String name;
+	Thread t;
+	Test2 test;
+
+	public NewThread(String name,Test2 test) {
+		this.name = name;
+		t = new Thread(this,name);
+		this.test = test;
+		System.out.println("New Thread: "+t);
+	}
+	
+	@Override
+	public void run() {
+		try {
+			for(int i = 5;i>=0;i--) {
+				test.print(this);
+			}
+		} catch (Exception e) {
+
+		}
+		
+		System.out.println(name +" exiting");
+	}
+	
+	
+	
 }
